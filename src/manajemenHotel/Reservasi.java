@@ -47,6 +47,6 @@ public class Reservasi extends Hotel {
         System.out.println("| Tipe Kamar     : " + kamar.getTipeKamar());
         System.out.println("| Kapasitas Kasur: " + kamar.getJenisKasur());
         System.out.println("| Tarif / Malam  : Rp" + tarifPerMalam);
-        System.out.println("----------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+        System.out.println("--------------------------------------------------");
     }
 }

@@ -1,14 +1,17 @@
 package manajemenHotel;
+import java.util.Scanner;
 
 public class main {
     public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
 
         KamarStandard Kamar101 = new KamarStandard("101", "2 orang");
         KamarStandard Kamar102 = new KamarStandard("102", "2 orang");
         KamarStandard Kamar103 = new KamarStandard("103", "2 orang");
         KamarStandard Kamar104 = new KamarStandard("104", "2 orang");
         KamarStandard Kamar105 = new KamarStandard("105", "2 orang");
-        
+
         KamarDeluxe Kamar201 = new KamarDeluxe("201", "2 orang");
         KamarDeluxe Kamar202 = new KamarDeluxe("202", "2 orang");
         KamarDeluxe Kamar203 = new KamarDeluxe("203", "2 orang");
@@ -26,41 +29,49 @@ public class main {
         KamarPresidential Kamar403 = new KamarPresidential("403", "6 orang");
         KamarPresidential Kamar404 = new KamarPresidential("404", "6 orang");
         KamarPresidential Kamar405 = new KamarPresidential("405", "6 orang");
-        
+
         Reservasi res1 = new Reservasi("2026101", Kamar101);
         Reservasi res2 = new Reservasi("2026102", Kamar102);
         Reservasi res3 = new Reservasi("2026201", Kamar203, 500000.0);
         Reservasi res4 = new Reservasi("2026401", Kamar405, 1000000.0);
         Reservasi res5 = new Reservasi("2026302", Kamar302, 750000.0);
 
-        System.out.println("============================================================================================================================================================================");
-        System.out.println("|                                                                   SISTEM MANAJEMEN KAMAR HOTEL                                                                           |");
-        System.out.println("============================================================================================================================================================================\n");
+        System.out.println("ingin login menjadi siapa?");
+        System.out.println("1. Costumer");
+        System.out.println("2. Admin");
+        System.out.print("pilihan: ");
+        int pilihan = input.nextInt();
 
-        System.out.println("[ INFORMASI HOTEL ]");
-        System.out.println("----------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
-        System.out.println("| Nama Hotel   : " + Kamar101.getNamaHotel());
-        System.out.println("| Alamat Hotel : " + Kamar101.getAlamatHotel());
-        System.out.println("============================================================================================================================================================================\n");
+        if ( pilihan == 2 ) {
+            System.out.println("================================");
+            System.out.println("| SISTEM MANAJEMEN KAMAR HOTEL |");
+            System.out.println("================================\n");
 
-        System.out.println("[ INFORMASI FASILITAS KAMAR ]");
-        System.out.println("----------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
-        Kamar101.tampilkanFasilitas();
-        Kamar201.tampilkanFasilitas();
-        Kamar301.tampilkanFasilitas();
-        Kamar401.tampilkanFasilitas();
+            System.out.println("[ INFORMASI HOTEL ]");
+            System.out.println("--------------------------------------------------");
+            System.out.println("| Nama Hotel   : " + Kamar101.getNamaHotel());
+            System.out.println("| Alamat Hotel : " + Kamar101.getAlamatHotel());
+            System.out.println("| Status Login : Admin");
+            System.out.println("==================================================\n");
 
-        System.out.println("============================================================================================================================================================================\n");
-        
-        System.out.println("[ DATA RESERVASI ]");
-        System.out.println("----------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
-        res1.tampilkanInfo();
-        res2.tampilkanInfo();
-        res3.tampilkanInfo();
-        res4.tampilkanInfo();
-        res5.tampilkanInfo();
+            System.out.println("[ INFORMASI FASILITAS KAMAR ]");
+            System.out.println("--------------------------------------------------");
+            Kamar101.tampilkanFasilitas();
+            Kamar201.tampilkanFasilitas();
+            Kamar301.tampilkanFasilitas();
+            Kamar401.tampilkanFasilitas();
 
-        System.out.println("\n[+] TOTAL RESERVASI: " + Reservasi.getJumlahReservasi());
-        System.out.println("============================================================================================================================================================================\n");
+            System.out.println("==================");
+            System.out.println("[ DATA RESERVASI ]");
+            System.out.println("------------------");
+            res1.tampilkanInfo();
+            res2.tampilkanInfo();
+            res3.tampilkanInfo();
+            res4.tampilkanInfo();
+            res5.tampilkanInfo();
+
+            System.out.println("\n[+] TOTAL RESERVASI: " + Reservasi.getJumlahReservasi());
+            System.out.println("==================================================\n");
+        }
     }
 }
