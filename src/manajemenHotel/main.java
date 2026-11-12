@@ -75,6 +75,11 @@ public class main {
 
             System.out.println("\n[+] TOTAL KAMAR TERSEDIA: " + Kamar.getTotalKamar());
             System.out.println("==================================================\n");
+
         }
+        else {
+            System.out.println("halaman belum tersedia untuk user");
+        }
+
     }
 }
