@@ -12,6 +12,7 @@ public class Reservasi extends Hotel {
         this.kamar = kamar;
         setTarifPerMalam(tarifPerMalam);
         jumlahReservasi++;
+        kamar.kurangiTotalKamar();
     }
 
     public Reservasi(String kodeReservasi, Kamar kamar) {
@@ -20,6 +21,7 @@ public class Reservasi extends Hotel {
         this.kamar = kamar;
         this.tarifPerMalam = 350000.0;
         jumlahReservasi++;
+        kamar.kurangiTotalKamar();
     }
 
     public void setTarifPerMalam(double tarifPerMalam) {

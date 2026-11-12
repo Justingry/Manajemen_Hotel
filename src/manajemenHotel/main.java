@@ -72,6 +72,9 @@ public class main {
 
             System.out.println("\n[+] TOTAL RESERVASI: " + Reservasi.getJumlahReservasi());
             System.out.println("==================================================\n");
+
+            System.out.println("\n[+] TOTAL KAMAR TERSEDIA: " + Kamar.getTotalKamar());
+            System.out.println("==================================================\n");
         }
     }
 }
