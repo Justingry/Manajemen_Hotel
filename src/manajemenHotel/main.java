@@ -41,6 +41,7 @@ public class main {
         System.out.println("2. Admin");
         System.out.print("pilihan: ");
         int pilihan = input.nextInt();
+        System.out.println();
 
         if ( pilihan == 2 ) {
 
@@ -49,9 +50,9 @@ public class main {
             System.out.println("2. Melihat database");
             System.out.print("pilihan: ");
             int pilihan2 = input.nextInt();
+            System.out.println();
 
             if (pilihan2 == 1) {
-
             }
             else if (pilihan2 == 2 ) {
 
