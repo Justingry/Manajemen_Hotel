@@ -1,25 +1,16 @@
 package manajemenHotel;
 
-class KamarPresidential extends Kamar {
-    private String Jacuzzi = ", Jacuzzi";
-    private String KamarTerpisah = ", Kamar Terpisah";
-    private String MiniBar = ", Mini Bar";
-    private String RuangMakan = ", Ruang Makan";
-    private String RuangTamu = ", Ruang Tamu";
-    private String WalkInCloset = ", Walk In Closet";
-    private String Balkon =  ", Balkon.";
-    
-    public KamarPresidential(String NomorKamar, String JenisKasur){
-        super (NomorKamar, "President", JenisKasur);
-    }
-    
-    public String getFasilitasKamarPresident(){
-        return getFasilitasDasar() + Jacuzzi + KamarTerpisah + MiniBar + RuangMakan + RuangTamu + WalkInCloset + Balkon;
-    }
+public class KamarPresidential extends Kamar {
+    private String jacuzzi = "Jacuzzi";
+    private String kamarTerpisah = "Kamar Terpisah";
+    private String miniBar = "Mini Bar";
+    private String ruangMakan = "Ruang Makan";
+    private String ruangTamu = "Ruang Tamu";
+    private String walkInCloset = "Walk In Closet";
+    private String balkon = "Balkon";
 
-    @Override
-    public void tampilkanFasilitas(){
-        System.out.println("[-] Kamar Presidential(P401 - P405)");
-        System.out.println("    Fasilitas: " + getFasilitasKamarPresident() + "\n");
+    public KamarPresidential(String NomorKamar, String JenisKasur) {
+        super(NomorKamar, "Presidential", JenisKasur, 1000000.0, "AC, TV, Kasur, Kamar Mandi");
+        setFasilitas(getFasilitas() + ", " + jacuzzi + ", " + kamarTerpisah + ", " + miniBar + ", " + ruangMakan + ", " + ruangTamu + ", " + walkInCloset + ", " + balkon);
     }
 }
