@@ -43,39 +43,53 @@ public class main {
         int pilihan = input.nextInt();
 
         if ( pilihan == 2 ) {
-            System.out.println("================================");
-            System.out.println("| SISTEM MANAJEMEN KAMAR HOTEL |");
-            System.out.println("================================\n");
 
-            System.out.println("[ INFORMASI HOTEL ]");
-            System.out.println("--------------------------------------------------");
-            System.out.println("| Nama Hotel   : " + Kamar101.getNamaHotel());
-            System.out.println("| Alamat Hotel : " + Kamar101.getAlamatHotel());
-            System.out.println("| Status Login : Admin");
-            System.out.println("==================================================\n");
+            System.out.println("menu apa yang ingin dipilih?");
+            System.out.println("1. Membuat pesanan");
+            System.out.println("2. Melihat database");
+            System.out.print("pilihan: ");
+            int pilihan2 = input.nextInt();
 
-            System.out.println("[ INFORMASI FASILITAS KAMAR ]");
-            System.out.println("--------------------------------------------------");
-            Kamar101.tampilkanFasilitas();
-            Kamar201.tampilkanFasilitas();
-            Kamar301.tampilkanFasilitas();
-            Kamar401.tampilkanFasilitas();
+            if (pilihan2 == 1) {
 
-            System.out.println("==================");
-            System.out.println("[ DATA RESERVASI ]");
-            System.out.println("------------------");
-            res1.tampilkanInfo();
-            res2.tampilkanInfo();
-            res3.tampilkanInfo();
-            res4.tampilkanInfo();
-            res5.tampilkanInfo();
+            }
+            else if (pilihan2 == 2 ) {
 
-            System.out.println("\n[+] TOTAL RESERVASI: " + Reservasi.getJumlahReservasi());
-            System.out.println("==================================================\n");
+                System.out.println("================================");
+                System.out.println("| SISTEM MANAJEMEN KAMAR HOTEL |");
+                System.out.println("================================\n");
 
-            System.out.println("\n[+] TOTAL KAMAR TERSEDIA: " + Kamar.getTotalKamar());
-            System.out.println("==================================================\n");
+                System.out.println("[ INFORMASI HOTEL ]");
+                System.out.println("--------------------------------------------------");
+                System.out.println("| Nama Hotel   : " + Kamar101.getNamaHotel());
+                System.out.println("| Alamat Hotel : " + Kamar101.getAlamatHotel());
+                System.out.println("| Status Login : Admin");
+                System.out.println("==================================================\n");
+                System.out.println("[ INFORMASI FASILITAS KAMAR ]");
+                System.out.println("--------------------------------------------------");
+                Kamar101.tampilkanFasilitas();
+                Kamar201.tampilkanFasilitas();
+                Kamar301.tampilkanFasilitas();
+                Kamar401.tampilkanFasilitas();
 
+                System.out.println("==================");
+                System.out.println("[ DATA RESERVASI ]");
+                System.out.println("------------------");
+                res1.tampilkanInfo();
+                res2.tampilkanInfo();
+                res3.tampilkanInfo();
+                res4.tampilkanInfo();
+                res5.tampilkanInfo();
+
+                System.out.println("\n[+] TOTAL RESERVASI: " + Reservasi.getJumlahReservasi());
+                System.out.println("==================================================\n");
+
+                System.out.println("\n[+] TOTAL KAMAR TERSEDIA: " + Kamar.getTotalKamar());
+                System.out.println("==================================================\n");
+            }
+            else {
+                System.out.println("Menu belum tersedia");
+            }
         }
         else {
             System.out.println("halaman belum tersedia untuk user");
