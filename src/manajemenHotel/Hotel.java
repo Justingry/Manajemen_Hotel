@@ -1,6 +1,6 @@
 package manajemenHotel;
 
-class Hotel {
+public abstract class Hotel {
     private String namaHotel;
     private String alamatHotel;
     private String jenisLayanan;
@@ -23,10 +23,11 @@ class Hotel {
         return jenisLayanan;
     }
 
+    public abstract void tampilkanLayananUtama();
+
     public void tampilkanHotel(){
         System.out.println("| Nama Hotel   : " + getNamaHotel());
         System.out.println("| Alamat Hotel : " + getAlamatHotel());
         System.out.println("| Layanan      : " + getJenisLayanan());
-        System.out.println("============================================================================================================================================================================\n");
     }
 }
